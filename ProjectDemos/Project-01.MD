@@ -2,10 +2,6 @@
 
 We know how to use work with each and Git, Jenkins independently. What if you want to collaborate these two? that is where Simple DevOps project helps you. Follow below steps if you are a new guy to DevOps. You love it. 
 
-### Follow this article in **[YouTube](https://www.youtube.com/watch?v=Z9G5stlXoyg)**  
-#### Prerequisites
-1. EC2 instance with tomcat installation **[installation steps video](https://youtu.be/m21nFreFw8A)
-1. Jenkins server **[Get Help here](https://www.youtube.com/watch?v=M32O4Yv0ANc)
 
 ### Part-01 : Adding steps for Integration
 ### Steps to create Jenkin job
@@ -37,7 +33,7 @@ Modify the same job which created in part-01 and add deployment steps.
  - Post Steps
    - Deploy war/ear to container
       - WAR/EAR files : `**/*.war`
-      - Containers : `Tomcat 8.x`
+      - Containers : `Tomcat 11.x`
          - Credentials: `Tomcat_user` (which created in above step)
          - Tomcat URL : `http://<PUBLIC_IP>:<PORT_NO>`
 
