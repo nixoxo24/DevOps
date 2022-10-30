@@ -1,9 +1,9 @@
 ## Simple DevOps Project -3 
 
 
-1. Launch server for Docker host
+1. Launch CentOS server for Docker host
 
-2. Install docker on EC2 instance and start services 
+2. Install docker on CentOS server and start services 
   ```sh 
   yum install docker
   service docker start
