@@ -1,7 +1,7 @@
 ## Simple DevOps Project -3 
 
 
-1. Launch an EC2 instance for Docker host
+1. Launch server for Docker host
 
 2. Install docker on EC2 instance and start services 
   ```sh 
@@ -26,7 +26,7 @@ mkdir /opt/docker
 From tomcat:8-jre8 
 
 # Maintainer
-MAINTAINER "valaxytech@gmail.com" 
+MAINTAINER "nixoxo@gmail.com" 
 
 # copy war file on to container 
 COPY ./webapp.war /usr/local/tomcat/webapps
@@ -38,8 +38,8 @@ Manage Jenkins --> Configure system -->  Publish over SSH --> add Docker server 
 6. Create Jenkins job 
 
 A) Source Code Management  
- Repository : https://github.com/ValaxyTech/hello-world.git  
- Branches to build : */master  
+ Repository : https://github.com/nixoxo24/DevOps-project.git  
+ Branches to build : */main
 
 B) Build
  Root POM: pom.xml  
@@ -50,11 +50,11 @@ C) send files or execute commands over SSH
  Source files	: webapp/target/*.war  
  Remove prefix	: webapp/target  
  Remote directory	: //opt//docker  
- Exec command	: docker stop valaxy_demo; docker rm -f valaxy_demo; docker image rm -f valaxy_demo; cd /opt/docker; docker build -t valaxy_demo .  
+ Exec command	: docker stop project_demo; docker rm -f project_demo; docker image rm -f project_demo; cd /opt/docker; docker build -t project_demo .  
 
 D) send files or execute commands over SSH  
   Name: docker_host  
-  Exec command	: docker run -d --name valaxy_demo -p 8090:8080 valaxy_demo  
+  Exec command	: docker run -d --name project_demo -p 8090:8080 project_demo  
 
 7. Login to Docker host and check images and containers. (no images and containers)
 
